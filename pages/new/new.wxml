@@ -1,0 +1,34 @@
+<view class="container">
+  <block wx:for="{{newlist}}" wx:key="{{item.id}}">
+    <view class='topic' bindtap='toTopics' data-topicid="{{item.id}}">
+    <view class='head-portrait'>
+      <image src='http://{{item.member.avatar_large}}'></image>
+    </view>
+    <view class='show'>
+
+      <view class='show-top'>
+        <view class='title'>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+
+      <view class='show-bottom'>
+        <view class='label'>
+          <text>{{item.node.title}}</text>
+        </view>
+        <view class='dot'></view>
+        <view class='author'>
+          <text>{{item.member.username}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='reply'>
+      <text>{{item.replies}}</text>
+    </view>
+  </view>
+  </block>
+  
+
+</view>

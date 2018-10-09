@@ -1,0 +1,50 @@
+<!-- 主题 -->
+<view class='container'> 
+  <!-- 头部 -->
+  <view class='header'>
+    <view class='head-left'>
+      <view class='node'>
+        <text>V2EX > {{topics.node.title}}</text>
+      </view>
+      <view class='release-time'>发布时间:{{topics.created}}</view>
+    </view>
+    <view class='head-right'>
+      <view>
+        <image src='http:{{topics.member.avatar_normal}}' bindtap='toUser' data-id='{{topics.member.id}}'></image>
+      </view>
+      <view class='username'>{{topics.member.username}}</view>
+    </view>
+  </view>
+
+  <!-- 标题与内容 -->
+  <view class='info'>
+    <view class='title'>
+      <h3>{{topics.title}}</h3>
+    </view>
+    <view class='content'>
+      <text>{{topics.content}}</text>
+    </view>
+  </view>
+
+  <!-- 回复数 -->
+  <view class='replies-count'>
+    <text>{{topics.replies}} 回复</text>
+  </view>
+
+  <block wx:for="{{replies}}" wx:key="{{index}}">
+    <!-- 回复 -->
+    <view class='replies'>
+      <view class='replies-left'>
+        <!-- 头像 -->
+        <image src='http:{{item.member.avatar_normal}}' bindtap='toUser' data-id='{{item.member.id}}'></image>
+      </view>
+      <view class='replies-right'>
+        <view class='username'>{{item.member.username}}</view>
+        <view class='replies-content'>{{item.content}}</view>
+        <!-- <template is="wxParse" data="{{wxParseData: item}}" /> -->
+       
+      </view>
+    </view>
+  </block>
+
+</view>

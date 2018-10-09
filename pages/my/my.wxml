@@ -1,0 +1,74 @@
+<view class="container">
+  <!-- 头部 搜索-->
+  <view class='header'>
+    <view class='logo'><text>V2EX</text></view>
+    <view class='search'><input type='text' bindblur='inputDone' bindconfirm="confirm" value='{{inputValue}}' confirm-type="search"></input></view>
+    <view class='btn'>
+      <button loading='{{infoLoading}}' bindtap='search' data-value='{{inputValue}}'><image src="../images/search.png" class="{{ infoLoading == true ? 'hidden-img': ''}}"></image></button>
+    </view> 
+  </view>
+ 
+  <!-- 用户信息 -->
+  <view class='info'>
+    <view class='info-left'>
+      <!-- 头像 -->
+      <view><image src='https:{{user.avatar_normal}}'></image></view>
+      <!-- 小标签 online-->
+      <view class='online'><text>ONLINE</text></view>
+    </view>
+    <view class='info-right'>
+      <view class='username'><text>{{user.username}}</text></view>
+      <!-- 签名 -->
+      <view class='tagline'><text>{{user.tagline == null || user.tagline == ''  ? '他没有留下签名哦！' : user.tagline}}</text></view>
+      <!-- 描述信息 -->
+      <view class='description'><text>V2EX 第 {{user.id}} 号会员，加入于 {{user.created}}</text></view>
+    </view>
+  </view>
+
+  <!-- 标签与简介 -->
+  <!--  bindtap='gg' data-homeurl='{{user.url}}' -->
+  <view class='tag' bindtap='toHome' data-username='{{user.username}}'>
+    <view class='tag-info'>
+      <!-- twitter -->
+      <view class='gm-tag'>
+        <image src='../images/social_twitter.png'></image>
+        <text>{{user.twitter == null || user.twitter == '' ? '不给你看' : user.twitter}}</text>
+      </view>
+      
+      <!-- 网站 -->
+      <view class='gm-tag'>
+        <image src='../images/social_home.png'></image>
+        <text>{{user.website == null || user.website == '' ? '不给你看' : user.website}}</text>
+      </view>
+
+      <!-- github -->
+      <view class='gm-tag'>
+        <image src='../images/social_github.png'></image>
+        <text>{{user.github == null ||  user.github == '' ? '不给你看' : user.github}}</text>
+      </view>
+
+      <!-- 地址 -->
+      <view class='gm-tag'>
+        <image src='../images/social_geo.png'></image>
+        <text>{{user.location == null || user.location == '' ? '真可惜' : user.location}}</text>
+      </view>
+
+    </view>
+    <!-- 个人简历 -->
+    <view class='bio'>
+      <text class='bio-description'>
+        {{user.bio == null || user.bio == '' ? '这个人很懒，什么都没有留下！' : user.bio}}
+      </text>
+    </view>
+  </view>
+
+  <button wx:if="{{goback}}" size='mini' type='primary' class='my-btn' bindtap='goback'>goback</button>
+</view>
+
+<!-- website 网站 -->
+<!-- github -->
+<!-- bio个人简介 -->
+<!-- tagline 签名 -->
+<!-- twitter 推特 -->
+<!-- location -->
+

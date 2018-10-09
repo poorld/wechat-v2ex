@@ -1,0 +1,38 @@
+<view class="container">
+  <block wx:for="{{hostlist}}" wx:key="{{item.id}}">
+ 
+    <!-- 主题区域 -->
+    <view class='topic' bindtap='toTopics' data-topicid="{{item.id}}">
+    <view class='head-portrait'>
+      <!-- 头像 -->
+      <image src='https://{{item.member.avatar_normal}}'></image>
+    </view>
+    <view class='show'>
+
+      <view class='show-top'>
+        <view class='title'>
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+
+      <view class='show-bottom'>
+        <view class='label'>
+          <text>{{item.node.title}}</text>
+        </view>
+        <view class='dot'></view>
+        <view class='author'>
+          <text>{{item.member.username}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <!-- 回复 -->
+    <view class='reply'>
+      <text>{{item.replies}}</text>
+    </view>
+  </view>
+  </block>
+  
+
+</view>

@@ -1,0 +1,101 @@
+/* pages/my/my.wxss */
+.header {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+.head-left {
+  width: 70%;
+  position: relative;
+}
+/* 节点 */
+.node {
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+/* 节点字体 */
+.node text{
+  font-size: 0.8em;
+  color: rgb(146, 146, 146);
+  background-color: #eee;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+}
+
+/* 发布时间字体 */
+.release-time {
+  font-size: 0.7em;
+  color: rgb(146, 146, 146);
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx;
+}
+
+/* 头像 */
+image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+}
+/* 用户名 */
+.username {
+  font-size: 0.8em;
+  color: rgb(170, 170, 170);
+}
+.head-right {
+  width: 30%;
+  text-align: center;
+}
+
+/* 标题与内容 */
+.info {
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.title {
+  font-size: 1.2em;
+  color: rgba(90, 90, 90, 0.911);
+  font-weight: bold;
+}
+.content {
+  margin-top: 20rpx;
+  
+}
+.content text{
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.829);
+}
+
+.replies-count {
+  height: 50rpx;
+  background-color: rgba(238, 238, 238, 0.671);
+  border-radius: 20rpx;
+  margin: 10rpx;
+}
+.replies-count text {
+  margin-left: 20rpx;
+  font-size: 0.7em;
+  color: rgba(0, 0, 0, 0.438);
+}
+.replies {
+  margin: 10rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: flex-start;
+}
+.replies-left image{
+  margin: 10rpx;
+}
+.replies-right .username {
+  margin-top: 5rpx;
+}
+.replies-content {
+  /* background-color: #eee; */
+  width: 100%;
+  font-size: 0.9em;
+  color: rgba(75, 75, 75, 0.918);
+  padding-top: 20rpx;
+  word-break:break-all;
+}

@@ -1,0 +1,148 @@
+/* 背景颜色全部灰色 */
+page {
+  display: block;
+  min-height: 100%;
+  background-color: rgba(212, 212, 212, 0.877);
+}
+
+.header {
+  border-top: 2px solid #eee;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1rpx 1rpx 5rpx rgb(139, 139, 139);
+}
+.logo text{
+  font-size: 1.3em;
+  /* font-weight: bold; */
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+.search {
+  width: 450rpx;
+  display:inline-block;
+} 
+.search input{
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 30rpx;  
+  padding-left: 15rpx;
+}
+/* .header .btn {
+  width: 50rpx;
+  height: 50rpx;
+  border: 3px solid #eee;
+  border-radius: 50rpx;
+}  */
+.btn button {
+   background-color: transparent;
+}
+.btn button::after {
+  border: none;
+}
+.btn image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.show-img {
+  display: block;
+}
+.hidden-img {
+  display: none;
+}
+
+.info {
+  border: 1px solid #eee;
+  height: 250rpx;
+  margin: 50rpx 20rpx 2rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10rpx;
+  box-shadow: 1rpx 1rpx 5rpx rgb(139, 139, 139);
+}
+.info-left {
+  width: 300rpx;
+  text-align: center;
+}
+.info-right {
+  width: 100%;
+  /* background-color: #eee; */
+}
+.info-left image{
+  margin-top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.online text {
+  font-size: 0.7em;
+  background-color: #4ba612;
+  color: #fff;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+}
+.info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.username text {
+  font-size: 1em;
+  font-weight: bold;
+}
+.tagline text {
+  font-size: 0.9em;
+}
+.description text {
+  font-size: 0.8em;
+  color: rgb(197, 197, 197);
+}
+
+.tag {
+  background-color: #fff;
+  height: 600rpx;
+  margin: 20rpx;
+  border-radius: 20rpx;
+  /* padding: 20rpx; */
+  box-shadow: 1rpx 1rpx 5rpx rgb(139, 139, 139);
+}
+.tag-info {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.gm-tag {
+  margin: 10rpx;
+  background-color: rgba(238, 238, 238, 0.781);
+  border-radius: 20rpx;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  color: rgb(156, 156, 156);
+}
+.gm-tag image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.bio {
+  margin: 20rpx;
+}
+.bio-description {
+  font-size: 0.8em;
+  color: hsla(0, 0%, 29%, 0.514);
+  
+}
+.bio-description::before {
+  content: '个人简介';
+  display: block;
+  color: black;
+}
+
+.my-btn {
+  position: absolute;
+  right: 20rpx;
+}
